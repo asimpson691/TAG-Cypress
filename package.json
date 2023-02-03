@@ -1,0 +1,9 @@
+{
+  "name": "TAG_Cypress",
+  "version": "0.0.1",
+  "description": "Example Cypress tests for a variety of applications",
+  "main": "index.js",
+  "repository": "https://github.com/asimpson691/TAG-Cypress.git",
+  "author": "Test Automation Guild",
+  "license": "UNLICENSED"
+}
