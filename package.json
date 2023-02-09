@@ -8,5 +8,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "cypress": "^12.5.1"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0"
   }
 }
