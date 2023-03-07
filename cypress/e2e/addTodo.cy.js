@@ -1,24 +1,24 @@
+import * as create from './steps/todos/create';
+
 describe('Add Todo', () => {
   it('I can add a single todo - test is using class selectors', () => {
     // Pre-setup
     cy.visit('/')
 
     // Actions
-    cy.get('.new-todo').type('clean fridge')
-    cy.get('.new-todo').type('{enter}')
+    create.addTodos(['clean fridge']);
 
     // Expectations
     cy.get('.todo-list').find('li').should('have.length', '1')
     cy.get('.todo-list').find('li').should('have.text', 'clean fridge')
   })
 
-  it('I can add a single todo - test is using accessibilty props', () => {
+  it('I can add a single todo - test is using accessibilty props (where possible)', () => {
     // Pre-setup
     cy.visit('/')
 
     // Actions
-    cy.findByRole('textbox', { Name: 'What needs to be done?'}).type('clean fridge')
-    cy.findByRole('textbox', { Name: 'What needs to be done?'}).type('{enter}')
+    create.addTodos(['clean fridge']);
     
     // Expectations
     cy.get('.todo-list').within(() => {
