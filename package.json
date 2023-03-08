@@ -6,6 +6,7 @@
   "repository": "https://github.com/asimpson691/TAG-Cypress.git",
   "author": "Test Automation Guild",
   "license": "UNLICENSED",
+
   "scripts": {
     "cypress:open": "cypress open"
   },
