@@ -1,12 +1,14 @@
 import * as create from './steps/todos/create';
+beforeEach(() => {
+// Pre-setup
+cy.visit('/')
+
+// Actions
+create.addTodos(['clean fridge']);
+})
 
 describe('Add Todo', () => {
   it('I can add a single todo - test is using class selectors', () => {
-    // Pre-setup
-    cy.visit('/')
-
-    // Actions
-    create.addTodos(['clean fridge']);
 
     // Expectations
     cy.get('.todo-list').find('li').should('have.length', '1')
@@ -14,11 +16,6 @@ describe('Add Todo', () => {
   })
 
   it('I can add a single todo - test is using accessibilty props (where possible)', () => {
-    // Pre-setup
-    cy.visit('/')
-
-    // Actions
-    create.addTodos(['clean fridge']);
     
     // Expectations
     cy.get('.todo-list').within(() => {
