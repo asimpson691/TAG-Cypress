@@ -13,10 +13,10 @@ describe('Add Todo', () => {
     cy.get('.todo-list').find('li').should('have.text', 'clean fridge')
   })
 
-  it('I can add a single todo - test is using accessibilty props (where possible)', () => {
+  it('I can add a single todo - test is using accessibility props (where possible)', () => {
     // Pre-setup
     cy.visit('/')
-
+    
     // Actions
     create.addTodos(['clean fridge']);
     
